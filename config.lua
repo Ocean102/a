@@ -10,15 +10,10 @@ local hub = {
         file = "cool",
         save = true,
         val = { "khoinguyenamdau1234" }
-    },
-
-    colors = {
-        name = "#4a8fff",
-        error = "#ff3333"
     }
 }
 
-hub.notifyPrefix = '<font color="' .. hub.colors.name .. '"><b>' .. hubDat.name .. '</b></font> - '
-hub.errorPrefix = '<font color="' .. hub.colors.name .. '"><b>Lỗi callback</b></font>: bấm f9, kép xuống để gửi lỗi'
+hub.notifyPrefix = '<font color="#4a8fff"><b>' .. hubDat.name .. '</b></font> - '
+hub.errorPrefix = '<font color="#ff3333"><b>Lỗi callback</b></font>: bấm f9, kéo xuống r gửi lỗi'
 
 return hubDat
