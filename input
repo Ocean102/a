@@ -1,0 +1,6 @@
+local vim = game:GetService('VirtualInputManager')
+return function(key)
+    vim:SendKeyEvent(true, key, false, nil)
+    task.wait(0)
+    vim:SendKeyEvent(false, key, false, nil)
+end
