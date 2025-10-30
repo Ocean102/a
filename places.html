@@ -1,7 +1,11 @@
-return {
+local spawns = workspace.world.spawns:GetChildren()
+local list = {}
 
-crafting = "Ancient Archive",
-enchantaltar = "Enchant Altar",
+for _,v in ipairs(spawns) do
+    local sp = v:FindFirstChild("spawn")
+    if sp then
+        list[v.Name] = sp
+    end
+end
 
-
-}
+return list
