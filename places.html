@@ -1,10 +1,16 @@
 local spawns = workspace.world.spawns:GetChildren()
 local list = {}
 
+local function splitUpper(s)
+    return (s
+        :gsub("([a-z0-9])(%u)", "%1 %2")
+    )
+end
+
 for _,v in ipairs(spawns) do
     local sp = v:FindFirstChild("spawn")
     if sp then
-        list[v.Name] = sp
+        list[splitUpper(v.Name)] = sp
     end
 end
 
